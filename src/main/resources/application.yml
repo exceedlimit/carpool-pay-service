@@ -1,0 +1,23 @@
+spring:
+  data:
+    maria:
+      jdbc-url: jdbc:mariadb://localhost:3306/carpool_settlement?serverTimeZone=UTC&CharacterEncoding=UTF-8
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: root
+      password: maria@7474
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        #show_sql: true
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    generate-ddl: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+server:
+  port: 8080
